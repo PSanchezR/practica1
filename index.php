@@ -33,121 +33,128 @@ This program is free software: you can redistribute it and/or modify
 	
 	if($paso == 0)
 	{
+	?>	
+		<form action='index.php' method='post'>
+		<label for='etapa' hidden>etapa:</label>
+		<h2><input type='text' name='etapa' id='etapa' value='1' hidden /></h2>
+		<h2><label for='nombre'>Nombre</label></h2>
+		<input type='text' name='nombre' id='nombre' value='' />
 		
-		echo"<form action='index.php' method='post'>";
-		echo"	<label for='etapa' hidden>etapa:</label>";
-		echo"	<h2><input type='text' name='etapa' id='etapa' value='1' hidden /></h2>";
-		echo"	<h2><label for='nombre'>Nombre</label></h2>";
-		echo"	<input type='text' name='nombre' id='nombre' value='' />";
-		
-		echo"   <input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />";
-		echo"   <input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />";
-		echo"</form>";
+		<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />
+		<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />
+		</form>
+	<?
 	}
 	elseif($paso == 1)
 	{
 		$nombre=$_POST["nombre"];
-	
-		echo"<form action='index.php' method='post'>";
-		echo"	<label for='etapa' hidden>etapa:</label>";
-		echo"	<input type='text' name='etapa' id='etapa' value='2' hidden />";
-		echo"	<label for='nombre' hidden>Nombre</label>";
-		echo"	<input type='text' name='nombre' id='nombre' value='$nombre' hidden/>";
-		echo"	<h2><label for='apellido' >Apellido</label></h2>";
-		echo"	<input type='text' name='apellido' id='apellido' value='' />";
-		echo"	<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />";
-		echo"	<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />";
-		echo"</form>";
+	?>
+		<form action='index.php' method='post'>
+		<label for='etapa' hidden>etapa:</label>
+		<input type='text' name='etapa' id='etapa' value='2' hidden />
+		<label for='nombre' hidden>Nombre</label>
+		<input type='text' name='nombre' id='nombre' value='$nombre' hidden/>
+		<h2><label for='apellido' >Apellido</label></h2>
+		<input type='text' name='apellido' id='apellido' value='' />
+		<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />
+		<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />
+		</form>
+	<?
 		
 	}
 	elseif($paso == 2)
 	{
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
-		echo"<form action='index.php' method='post'>";
-		echo"	<label for='etapa' hidden>etapa:</label>";
-		echo"	<input type='text' name='etapa' id='etapa' value='3' hidden />";
-		echo"	<label for='nombre' hidden>Nombre</label>";
-		echo"	<input type='text' name='nombre' id='nombre' value='$nombre' hidden/>";
-		echo"	<label for='apellido' hidden >Apellido</label>";
-		echo"	<input type='text' name='apellido' id='apellido' value='$apellido' hidden />";
-		echo"	<h2><label for='password1'>Contrase&ntilde;a</label></h2>";
-		echo"	<input type='password' name='password1' id='password1' value='' />";
-		echo"	<h2><label for='password2'>Repita la contrase&ntilde;a</label></h2>";
-		echo"	<input type='password' name='password2' id='password2' value='' />";
-		echo"	<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />";
-		echo"	<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />";
-		echo"</form>";
+	?>
+		<form action='index.php' method='post'>
+		<label for='etapa' hidden>etapa:</label>
+		<input type='text' name='etapa' id='etapa' value='3' hidden />
+		<label for='nombre' hidden>Nombre</label>
+		<input type='text' name='nombre' id='nombre' value='$nombre' hidden/>
+		<label for='apellido' hidden >Apellido</label>
+		<input type='text' name='apellido' id='apellido' value='$apellido' hidden />
+		<h2><label for='password1'>Contrase&ntilde;a</label></h2>
+		<input type='password' name='password1' id='password1' value='' />
+		<h2><label for='password2'>Repita la contrase&ntilde;a</label></h2>
+		<input type='password' name='password2' id='password2' value='' />
+		<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />
+		<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />
+		</form>
 		
 		
 		
-				
+	<?			
 	}
 	elseif($paso == 3)
 	{
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
 		$contraseña=$_POST["password1"];
-		echo"<form action='./../index.php' method='post'>";
-		echo"	<label for='etapa' hidden>etapa:</label>";
-		echo"	<input type='text' name='etapa' id='etapa' value='4' hidden />";
-		echo"	<label for='nombre' hidden>Nombre</label>";
-		echo"	<input type='text' name='nombre' id='nombre' value='$nombre' hidden/>";
-		echo"	<label for='apellido' hidden >Apellido</label>";
-		echo"	<input type='text' name='apellido' id='apellido' value='$apellido' hidden />";
-		echo"	<label for='password1' hidden>Contrase&ntilde;a</label>";
-		echo"	<input type='password' name='password1' id='password1' value='$contraseña' hidden/>";
-		echo"	<label for='password2' hidden>Repita la contrase&ntilde;a</label>";
-		echo"	<input type='password' name='password2' id='password2' value='$contraseña' hidden/>";
-		echo"	<h2><label for='sexo'>sexo:</label></h2>";
-		echo"	<input type='text' name='sexo' id='sexo' value='' />";
+	?>
+		<form action='./../index.php' method='post'>
+		<label for='etapa' hidden>etapa:</label>
+		<input type='text' name='etapa' id='etapa' value='4' hidden />
+		<label for='nombre' hidden>Nombre</label>
+		<input type='text' name='nombre' id='nombre' value='$nombre' hidden/>
+		<label for='apellido' hidden >Apellido</label>
+		<input type='text' name='apellido' id='apellido' value='$apellido' hidden />
+		<label for='password1' hidden>Contrase&ntilde;a</label>
+		<input type='password' name='password1' id='password1' value='$contraseña' hidden/>
+		<label for='password2' hidden>Repita la contrase&ntilde;a</label>
+		<input type='password' name='password2' id='password2' value='$contraseña' hidden/>
+		<h2><label for='sexo'>sexo:</label></h2>
+		<input type='text' name='sexo' id='sexo' value='' />
 		
-		echo"	<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />";
-		echo"	<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />";
-		echo"</form>";
+		<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />
+		<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />
+		</form>
 		
 		
 
-
-	
-		
+	<?	
 	}
 	elseif($paso == 4)
 	{
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
 		$contraseña=$_POST["password1"];
-		$sexo=$_POST["sexo"];
-		echo"<form action='index.php' method='post'>";
-		echo"	<label for='etapa' hidden>etapa:</label>";
-		echo"	<input type='text' name='etapa' id='etapa' value='5' hidden />";
-		echo"	<label for='nombre' hidden>Nombre</label>";
-		echo"	<input type='text' name='nombre' id='nombre' value='$nombre' hidden/>";
-		echo"	<label for='apellido' hidden >Apellido</label>";
-		echo"	<input type='text' name='apellido' id='apellido' value='$apellido' hidden />";
-		echo"	<label for='password1'hidden>Contrase&ntilde;a</label>";
-		echo"	<input type='password' name='password1' id='password1' value='$contraseña' hidden/>";
-		echo"	<label for='password2' hidden>Repita la contrase&ntilde;a</label>";
-		echo"	<input type='password' name='password2' id='password2' value='$contraseña' hidden/>";
-		echo"	<label for='sexo' hidden>sexo:</label>";
-		echo"	<input type='text' name='sexo' id='sexo' value='$sexo' hidden/>";
+		$sexo=$_POST["sexo"];>
+	?>
+		<form action='index.php' method='post'>
+		<label for='etapa' hidden>etapa:</label>
+		<input type='text' name='etapa' id='etapa' value='5' hidden />
+		<label for='nombre' hidden>Nombre</label>
+		<input type='text' name='nombre' id='nombre' value='$nombre' hidden/>
+		<label for='apellido' hidden >Apellido</label>
+		<input type='text' name='apellido' id='apellido' value='$apellido' hidden />
+		<label for='password1'hidden>Contrase&ntilde;a</label>
+		<input type='password' name='password1' id='password1' value='$contraseña' hidden/>
+		<label for='password2' hidden>Repita la contrase&ntilde;a</label>
+		<input type='password' name='password2' id='password2' value='$contraseña' hidden/>
+		<label for='sexo' hidden>sexo:</label>
+		<input type='text' name='sexo' id='sexo' value='$sexo' hidden/>
 		
-		echo"	<h2><label for='titulación'>Titulación:</label></h2>";
-		echo"	<input type='text' name='titulación' id='titulación' value=''/>";
+		<h2><label for='titulación'>Titulación:</label></h2>
+		<input type='text' name='titulación' id='titulación' value=''/>
 		
-		echo"	<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />";
-		echo"	<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' /1>";
-		echo"</form>";
-		
+		<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />
+		<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />
+		</form>";
+	<?	
 	}else
-	{
-		echo "<br>";
+	{	
+	?>
+		<br>
+	<?
 		foreach($_POST as $variable => $valor)
 		{
 			if(($variable != "etapa")&&($variable != "botonDeEnvio"))
 			{
 				echo "$variable = $valor ";
-				echo "<br>";
+				?>
+				<br>
+				<?
 			}
 		}
 	}
