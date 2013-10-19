@@ -140,7 +140,7 @@ This program is free software: you can redistribute it and/or modify
 		
 		<input type='submit' name='botonDeEnvio' id='botonDeEnvio' value='Enviar datos' />
 		<input type='reset' name='bontoDeReset' id='botonDeEnvio' value='Vaciar formulario' />
-		</form>";
+		</form>
 	<?	
 	}else
 	{	
